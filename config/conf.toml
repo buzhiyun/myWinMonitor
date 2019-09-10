@@ -1,0 +1,26 @@
+
+[app]
+  #app 名称
+  name = "admin"
+  #app url
+  url  = "http://localhost"
+  addr = ":8080"
+  #单元测试调试信息
+  debug = false
+
+[user]
+  [user.wangtaosheng]
+    name = "汪涛生"
+    email = "taosheng@7net.cc"
+  [user.zhaozhihao]
+    name = "赵志豪"
+    email = "zhihao@7net.cc"
+  [user.licangyuan]
+    name = "李仓元"
+    email = "cangyuan@7net.cc>"
+  [user.chenyonglai]
+    name = "陈永来"
+    email = "yonglai@7net.cc"
+  [user.wangyue]
+    name = "汪越"
+    email = "wangyue@7net.cc"

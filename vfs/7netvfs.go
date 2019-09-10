@@ -4,6 +4,7 @@ import (
 	"adminMonitor/utils"
 	"fmt"
 	"github.com/kataras/iris"
+	"log"
 	"os/exec"
 )
 
@@ -29,7 +30,7 @@ func vfsStstus(ctx iris.Context, status string) {
 	}
 	err := cmd.Start()
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 
 	go utils.SyncLog(ctx, stdout)

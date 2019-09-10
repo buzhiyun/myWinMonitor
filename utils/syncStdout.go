@@ -1,10 +1,10 @@
 package utils
 
 import (
-	"fmt"
 	"github.com/kataras/iris"
 	"golang.org/x/text/encoding/simplifiedchinese"
 	"io"
+	"log"
 	"strings"
 )
 
@@ -20,7 +20,7 @@ func SyncLog(ctx iris.Context, reader io.ReadCloser) {
 			//ctx.Write(outputByte)
 			b, _ := simplifiedchinese.GBK.NewDecoder().Bytes(outputByte)
 			if _, err := ctx.WriteString(strings.ReplaceAll(string(b), "\n", "<br>")); err != nil {
-				fmt.Println(err)
+				log.Println(err)
 			}
 
 			ctx.ResponseWriter().Flush()

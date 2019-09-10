@@ -4,6 +4,7 @@ import (
 	"adminMonitor/utils"
 	"fmt"
 	"github.com/kataras/iris"
+	"log"
 	"os/exec"
 )
 
@@ -30,7 +31,7 @@ func iisreset(ctx iris.Context, setStatus string) {
 	}
 	err := cmd.Start()
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 
 	go utils.SyncLog(ctx, stdout)
